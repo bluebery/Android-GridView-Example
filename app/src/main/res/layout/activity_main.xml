@@ -1,19 +1,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#f0f0f0">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/toolbar"
+        android:layout_height="50dp"
+        android:minHeight="30dp"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/actionbar_title_r" />
+
+    </android.support.v7.widget.Toolbar>
 
     <GridView
         android:id="@+id/gridView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_margin="5dp"
         android:columnWidth="100dp"
         android:drawSelectorOnTop="true"
         android:gravity="center"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="5dp"
+        android:verticalSpacing="10dp"
         android:focusable="true"
         android:clickable="true"/>
 </RelativeLayout>
